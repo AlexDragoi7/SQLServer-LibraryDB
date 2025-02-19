@@ -1,0 +1,26 @@
+[
+  {
+    "TABLE_CATALOG": "LibraryDB",
+    "TABLE_SCHEMA": "dbo",
+    "TABLE_NAME": "Authors",
+    "TABLE_TYPE": "BASE TABLE"
+  },
+  {
+    "TABLE_CATALOG": "LibraryDB",
+    "TABLE_SCHEMA": "dbo",
+    "TABLE_NAME": "Books",
+    "TABLE_TYPE": "BASE TABLE"
+  },
+  {
+    "TABLE_CATALOG": "LibraryDB",
+    "TABLE_SCHEMA": "dbo",
+    "TABLE_NAME": "Members",
+    "TABLE_TYPE": "BASE TABLE"
+  },
+  {
+    "TABLE_CATALOG": "LibraryDB",
+    "TABLE_SCHEMA": "dbo",
+    "TABLE_NAME": "Borrowing",
+    "TABLE_TYPE": "BASE TABLE"
+  }
+]

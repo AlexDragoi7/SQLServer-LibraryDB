@@ -1,0 +1,1 @@
+SELECT a.Name FROM Authors a
