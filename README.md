@@ -16,13 +16,15 @@ Please follow the below steps to run the data locally:
 2. Run 'sqlcmd -S <servername> -U <username> -C' to login into SQL Server (password will be required)
 3. Run 'CREATE DATABASE LibraryDB'
 4. Run 'USE LibraryDB' and the below scripts to insert table data:
+<pre>
  #INSERT Authors table
  CREATE TABLE [dbo].[Authors] (
     [AuthorID] INT           IDENTITY (1, 1) NOT NULL,
     [Name]     VARCHAR (255) NOT NULL,
     PRIMARY KEY CLUSTERED ([AuthorID] ASC)
 );
-
+</pre>
+<pre>
  #INSERT Books table
  CREATE TABLE [dbo].[Books] (
     [BookID]        INT           IDENTITY (1, 1) NOT NULL,
@@ -33,6 +35,8 @@ Please follow the below steps to run the data locally:
     PRIMARY KEY CLUSTERED ([BookID] ASC),
     FOREIGN KEY ([AuthorID]) REFERENCES [dbo].[Authors] ([AuthorID])
 );
+</pre>
+<pre>
  #INSERT Members table
  CREATE TABLE [dbo].[Members] (
     [MemberID] INT           IDENTITY (1, 1) NOT NULL,
@@ -41,6 +45,8 @@ Please follow the below steps to run the data locally:
     [Phone]    VARCHAR (15)  NULL,
     PRIMARY KEY CLUSTERED ([MemberID] ASC)
 );
+</pre>
+<pre>
  #INSERT Borrowing table
  CREATE TABLE [dbo].[Borrowing] (
     [BorrowID]   INT  IDENTITY (1, 1) NOT NULL,
@@ -52,9 +58,9 @@ Please follow the below steps to run the data locally:
     FOREIGN KEY ([BookID]) REFERENCES [dbo].[Books] ([BookID]),
     FOREIGN KEY ([MemberID]) REFERENCES [dbo].[Members] ([MemberID])
 );
-
+</pre>
 5. With all tables created, run 'sqlcmd -S <servername> -d <databasename> -i <filepath> (SQL table files - e.g. Authors.sql) -C' -> this command will automatically import the data into each aforementioned table
 6. Run any query from 'MSSQL queries' folder 
 7. Use SQLCMD or any GUI based application of your choice (e.g. Azure Data Studio, DBeaver, Beekeeper Studio etc.)
 
-![title](/home/larex/Programming/Data Engineering/MSSQL Library/Database_details.png)
+![Alt text](/home/larex/Programming/Data Engineering/MSSQL Library/Database_details.png)
