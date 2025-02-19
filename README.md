@@ -63,4 +63,4 @@ Please follow the below steps to run the data locally:
 6. Run any query from 'MSSQL queries' folder 
 7. Use SQLCMD or any GUI based application of your choice (e.g. Azure Data Studio, DBeaver, Beekeeper Studio etc.)
 
-![alt text](/home/larex/Programming/Data Engineering/MSSQL Library/Database_details.png)
+![alt text](Database_details.png)
